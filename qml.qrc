@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>assets/images/car-radio.png</file>
+        <file>assets/images/google-maps.png</file>
+        <file>assets/images/house.png</file>
+        <file>assets/images/phone-call.png</file>
+        <file>assets/images/setting.png</file>
+        <file>assets/images/smart-tv.png</file>
+        <file>assets/images/whatsapp.png</file>
+        <file>assets/images/youtube.png</file>
+    </qresource>
+    <qresource prefix="/Icon"/>
+</RCC>
