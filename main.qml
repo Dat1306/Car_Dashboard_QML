@@ -12,7 +12,10 @@ ApplicationWindow {
     title: qsTr("Car Dashboard")
     color: backgroundColor
     property int currentPage: 0
-    property color backgroundColor: "#FFFFFF"
+    property color backgroundColor: "#0D47A1"
+    property string backgroundImage: "qrc:/assets/images/car-image.png"
+    property color textColor: "#FFFFFF"
+    property color textColor2: "#000000"
 
     function isLightColor(c) {
         let rgb = Qt.rgba(parseInt(c.r * 255), parseInt(c.g * 255), parseInt(c.b * 255), 1)
@@ -31,6 +34,12 @@ ApplicationWindow {
             dateLabel.text = Qt.formatDate(now, "dd/MM/yyyy")
         }
     }
+    Image {
+        source: backgroundImage
+        anchors.fill: parent
+        fillMode: Image.PreserveAspectCrop
+        opacity: 0.5
+    }
 
     ColumnLayout {
         anchors.fill: parent
@@ -47,7 +56,7 @@ ApplicationWindow {
                 Text {
                     id: timeLabel
                     text: ""
-                    color: isLightColor(backgroundColor) ? "black" : "white"
+                    color: textColor
                     font.pixelSize: 32
                     font.bold: true
                 }
@@ -55,7 +64,7 @@ ApplicationWindow {
                 Text {
                     id: dateLabel
                     text: ""
-                    color: isLightColor(backgroundColor) ? "black" : "white"
+                    color: textColor
                     font.pixelSize: 18
                 }
             }
@@ -83,18 +92,21 @@ ApplicationWindow {
                     text: "🏠 " + qsTr("Home Screen")
                     onClicked: currentPage = 0
                     font.pixelSize: 16
+                    Material.foreground: textColor2
                 }
 
                 Button {
                     text: "🛠 " + qsTr("Vehicle Info")
                     onClicked: currentPage = 1
                     font.pixelSize: 16
+                    Material.foreground: textColor2
                 }
 
                 Button {
                     text: "⚙ " + qsTr("Settings")
                     onClicked: currentPage = 2
                     font.pixelSize: 16
+                    Material.foreground: textColor2
                 }
             }
         }
@@ -124,22 +136,22 @@ ApplicationWindow {
 
                 delegate: Column {
                     spacing: 10
-                    width: 100
-                    anchors.horizontalCenter: parent
+                    width: 150
+                    Layout.alignment: Qt.AlignHCenter
 
                     Rectangle {
-                        width: 80
-                        height: 80
+                        width: 120
+                        height: 120
                         radius: 20
                         color: "#EEEEEE"
                         border.color: "#CCCCCC"
                         border.width: 1
-                        anchors.horizontalCenter: parent.horizontalCenter
+                        Layout.alignment: Qt.AlignHCenter
 
                         Image {
                             anchors.centerIn: parent
-                            width: 60
-                            height: 60
+                            width: 80
+                            height: 80
                             source: icon
                             fillMode: Image.PreserveAspectFit
                         }
@@ -157,13 +169,17 @@ ApplicationWindow {
 
                     Text {
                         text: name
-                        font.pixelSize: 16
-                        color: isLightColor(backgroundColor) ? "black" : "white"
-                        anchors.left: parent.left
-                        anchors.leftMargin: 13
-                        width: parent.width
+                        font.pixelSize: 20
+                        color: textColor
+                        horizontalAlignment: Text.AlignLeft
+                        width: 120
+                        x: +20
                     }
+
                 }
+
+
+
             }
         }
     }
@@ -179,48 +195,48 @@ ApplicationWindow {
 
             Text {
                 text: qsTr("Speed")
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
             }
             Text {
-                text: "120 km/h"
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                text: "60 km/h"
+                color: textColor
                 font.pixelSize: 22
                 font.bold: true
             }
 
             Text {
                 text: qsTr("Fuel Level")
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
             }
             Text {
                 text: "75%"
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
                 font.bold: true
             }
 
             Text {
                 text: qsTr("Engine Temperature")
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
             }
             Text {
                 text: "85°C"
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
                 font.bold: true
             }
 
             Text {
                 text: qsTr("Tire Pressure")
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
             }
             Text {
                 text: "32 PSI"
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 22
                 font.bold: true
             }
@@ -236,7 +252,7 @@ ApplicationWindow {
 
             Text {
                 text: qsTr("Settings")
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
                 font.pixelSize: 34
                 font.bold: true
             }
@@ -244,7 +260,7 @@ ApplicationWindow {
             Text {
                 text: qsTr("Language")
                 font.pixelSize: 20
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
             }
 
             RowLayout {
@@ -264,7 +280,7 @@ ApplicationWindow {
             Text {
                 text: qsTr("Background Color")
                 font.pixelSize: 20
-                color: isLightColor(backgroundColor) ? "black" : "white"
+                color: textColor
             }
 
             RowLayout {
@@ -281,11 +297,24 @@ ApplicationWindow {
                 Repeater {
                     model: colorModel
                     delegate: Button {
+                        id: colorButton
                         text: model.colorName
+                        hoverEnabled: true
                         onClicked: backgroundColor = model.colorValue
+
+                        background: Rectangle {
+                            color: colorButton.hovered ? model.colorValue : "#DDDDDD"
+                            radius: 6
+                            border.color: "#888"
+                            border.width: 1
+                        }
+
+
                     }
                 }
             }
+
+
         }
     }
 

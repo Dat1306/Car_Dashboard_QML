@@ -32,7 +32,7 @@
 </message>
 <message>
 <source>Tire Pressure</source>
-<translation>タイヤ圧</translation>
+<translation>タイヤ圧力</translation>
 </message>
 <message>
 <source>Language</source>
@@ -68,7 +68,7 @@
 </message>
 <message>
 <source>YouTube</source>
-<translation>YouTube</translation>
+<translation>ユーチューブ</translation>
 </message>
 <message>
 <source>Maps</source>
@@ -80,7 +80,7 @@
 </message>
 <message>
 <source>WhatsApp</source>
-<translation>WhatsApp</translation>
+<translation>ワッツアップ</translation>
 </message>
 <message>
 <source>Phone</source>

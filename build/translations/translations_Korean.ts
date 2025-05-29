@@ -4,7 +4,7 @@
 <name>main</name>
 <message>
 <source>Car Dashboard</source>
-<translation>자동차 대시보드</translation>
+<translation>차량 대시보드</translation>
 </message>
 <message>
 <source>Home Screen</source>
@@ -44,11 +44,11 @@
 </message>
 <message>
 <source>Dark</source>
-<translation>어두운</translation>
+<translation>다크</translation>
 </message>
 <message>
 <source>Light</source>
-<translation>밝은</translation>
+<translation>라이트</translation>
 </message>
 <message>
 <source>Blue</source>
@@ -56,7 +56,7 @@
 </message>
 <message>
 <source>Green</source>
-<translation>녹색</translation>
+<translation>초록</translation>
 </message>
 <message>
 <source>Radio</source>
@@ -68,7 +68,7 @@
 </message>
 <message>
 <source>YouTube</source>
-<translation>YouTube</translation>
+<translation>유튜브</translation>
 </message>
 <message>
 <source>Maps</source>
@@ -80,7 +80,7 @@
 </message>
 <message>
 <source>WhatsApp</source>
-<translation>WhatsApp</translation>
+<translation>왓츠앱</translation>
 </message>
 <message>
 <source>Phone</source>

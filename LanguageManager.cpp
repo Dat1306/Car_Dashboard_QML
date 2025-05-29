@@ -41,8 +41,6 @@ void LanguageManager::changeLanguage(const QString &language) {
         qApp->installTranslator(&m_translator);
         QMetaObject::invokeMethod(m_engine, "retranslate");
         qDebug() << "Language changed to:" << language;
-
-        // Lưu lại ngôn ngữ đã chọn
         m_settings.setValue("language", language);
     } else {
         qDebug() << "Failed to load translation:" << qmFile;

@@ -4,43 +4,43 @@
 <name>main</name>
 <message>
 <source>Car Dashboard</source>
-<translation>Bảng điều khiển</translation>
+<translation>Bảng Điều Khiển Xe</translation>
 </message>
 <message>
 <source>Home Screen</source>
-<translation>Màn hình chính</translation>
+<translation>Trang Chủ Màn Hình</translation>
 </message>
 <message>
 <source>Vehicle Info</source>
-<translation>Thông tin xe</translation>
+<translation>Thông Tin Xe</translation>
 </message>
 <message>
 <source>Settings</source>
-<translation>Cài đặt</translation>
+<translation>Cài Đặt</translation>
 </message>
 <message>
 <source>Speed</source>
-<translation>Tốc độ</translation>
+<translation>Tốc Độ</translation>
 </message>
 <message>
 <source>Fuel Level</source>
-<translation>Mức nhiên liệu</translation>
+<translation>Mức Nhiên Liệu</translation>
 </message>
 <message>
 <source>Engine Temperature</source>
-<translation>Nhiệt độ động cơ</translation>
+<translation>Nhiệt Độ Động Cơ</translation>
 </message>
 <message>
 <source>Tire Pressure</source>
-<translation>Áp suất lốp</translation>
+<translation>Áp Suất Lốp Xe</translation>
 </message>
 <message>
 <source>Language</source>
-<translation>Ngôn ngữ</translation>
+<translation>Ngôn Ngữ</translation>
 </message>
 <message>
 <source>Background Color</source>
-<translation>Màu nền</translation>
+<translation>Màu Nền</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -52,19 +52,19 @@
 </message>
 <message>
 <source>Blue</source>
-<translation>Xanh dương</translation>
+<translation>Xanh Dương</translation>
 </message>
 <message>
 <source>Green</source>
-<translation>Xanh lá</translation>
+<translation>Xanh Lá</translation>
 </message>
 <message>
 <source>Radio</source>
-<translation>Đài</translation>
+<translation>Radio</translation>
 </message>
 <message>
 <source>Television</source>
-<translation>Truyền hình</translation>
+<translation>TiVi</translation>
 </message>
 <message>
 <source>YouTube</source>
@@ -72,11 +72,11 @@
 </message>
 <message>
 <source>Maps</source>
-<translation>Bản đồ</translation>
+<translation>Bản Đồ</translation>
 </message>
 <message>
 <source>Home</source>
-<translation>Trang chủ</translation>
+<translation>Trang Chủ</translation>
 </message>
 <message>
 <source>WhatsApp</source>
@@ -84,11 +84,11 @@
 </message>
 <message>
 <source>Phone</source>
-<translation>Điện thoại</translation>
+<translation>Điện Thoại</translation>
 </message>
 <message>
 <source>Settings</source>
-<translation>Cài đặt</translation>
+<translation>Cài Đặt</translation>
 </message>
 </context>
 </TS>

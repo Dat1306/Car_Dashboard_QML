@@ -9,6 +9,8 @@
         <file>assets/images/smart-tv.png</file>
         <file>assets/images/whatsapp.png</file>
         <file>assets/images/youtube.png</file>
+        <file>assets/images/car-image.png</file>
+        <file>assets/images/icon_car.png</file>
     </qresource>
     <qresource prefix="/Icon"/>
 </RCC>

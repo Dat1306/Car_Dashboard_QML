@@ -22,7 +22,7 @@ signals:
 private:
     void loadAvailableLanguages();
     void setupFileWatcher();
-    QSettings m_settings;  // Khai báo đối tượng QSettings
+    QSettings m_settings;
 
     QTranslator m_translator;
     QQmlApplicationEngine *m_engine;

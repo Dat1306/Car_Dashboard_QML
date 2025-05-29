@@ -277,6 +277,7 @@ Makefile: ../../Car_Dashboard_QML.pro C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++/qma
 		C:/Qt/6.8.1/mingw_64/mkspecs/features/qt_config.prf \
 		C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++/qmake.conf \
 		C:/Qt/6.8.1/mingw_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		C:/Qt/6.8.1/mingw_64/mkspecs/features/exclusive_builds.prf \
 		C:/Qt/6.8.1/mingw_64/mkspecs/features/toolchain.prf \
 		C:/Qt/6.8.1/mingw_64/mkspecs/features/default_pre.prf \
@@ -312,7 +313,6 @@ Makefile: ../../Car_Dashboard_QML.pro C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++/qma
 		C:/Qt/6.8.1/mingw_64/lib/Qt6Network.prl \
 		C:/Qt/6.8.1/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.8.1/mingw_64/lib/Qt6EntryPoint.prl \
-		.qmake.stash \
 		C:/Qt/6.8.1/mingw_64/mkspecs/features/build_pass.prf \
 		../../qml.qrc
 	$(QMAKE) -o Makefile ..\..\Car_Dashboard_QML.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -523,6 +523,7 @@ C:/Qt/6.8.1/mingw_64/mkspecs/features/qt_functions.prf:
 C:/Qt/6.8.1/mingw_64/mkspecs/features/qt_config.prf:
 C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++/qmake.conf:
 C:/Qt/6.8.1/mingw_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 C:/Qt/6.8.1/mingw_64/mkspecs/features/exclusive_builds.prf:
 C:/Qt/6.8.1/mingw_64/mkspecs/features/toolchain.prf:
 C:/Qt/6.8.1/mingw_64/mkspecs/features/default_pre.prf:
@@ -558,7 +559,6 @@ C:/Qt/6.8.1/mingw_64/lib/Qt6Qml.prl:
 C:/Qt/6.8.1/mingw_64/lib/Qt6Network.prl:
 C:/Qt/6.8.1/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.8.1/mingw_64/lib/Qt6EntryPoint.prl:
-.qmake.stash:
 C:/Qt/6.8.1/mingw_64/mkspecs/features/build_pass.prf:
 ../../qml.qrc:
 qmake: FORCE
