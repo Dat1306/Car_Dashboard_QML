@@ -6,7 +6,8 @@
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
     app.setWindowIcon(QIcon(":/assets/images/icon_car.png"));
-
+    QCoreApplication::setOrganizationName("MyCompany");
+    QCoreApplication::setApplicationName("CarDashboard");
     QQmlApplicationEngine engine;
 
     LanguageManager langManager(&engine);

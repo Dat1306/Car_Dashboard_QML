@@ -22,6 +22,7 @@ signals:
 private:
     void loadAvailableLanguages();
     void setupFileWatcher();
+    void applySavedLanguage();
     QSettings m_settings;
 
     QTranslator m_translator;

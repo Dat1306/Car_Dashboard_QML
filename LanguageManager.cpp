@@ -6,6 +6,7 @@ LanguageManager::LanguageManager(QQmlApplicationEngine *engine, QObject *parent)
     : QObject(parent), m_engine(engine) {
     loadAvailableLanguages();
     setupFileWatcher();
+    applySavedLanguage();
 }
 
 void LanguageManager::loadAvailableLanguages() {
@@ -36,7 +37,7 @@ QStringList LanguageManager::availableLanguages() const {
 
 void LanguageManager::changeLanguage(const QString &language) {
     QString qmFile = QCoreApplication::applicationDirPath() + "/../../translations/translations_" + language + ".qm";
-
+    qApp->removeTranslator(&m_translator);
     if (m_translator.load(qmFile)) {
         qApp->installTranslator(&m_translator);
         QMetaObject::invokeMethod(m_engine, "retranslate");
@@ -44,6 +45,12 @@ void LanguageManager::changeLanguage(const QString &language) {
         m_settings.setValue("language", language);
     } else {
         qDebug() << "Failed to load translation:" << qmFile;
+    }
+}
+void LanguageManager::applySavedLanguage() {
+    QString savedLang = m_settings.value("language").toString();
+    if (!savedLang.isEmpty()) {
+        changeLanguage(savedLang);
     }
 }
 
